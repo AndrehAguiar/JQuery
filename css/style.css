@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root{    
+    font-family: 'Ubuntu', sans-serif;
+}
+*{
+    font-weight: 300;
+    box-sizing: border-box;
+}
+html, body{
+    border: 0;
+    margin: 0;
+}
+.hidden{
+    display: none;
+}
+#slider>.slide{
+    width: 100%;
+}
+#slider>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ctrlSlide{
+    cursor: pointer;
+    margin: 0.5rem;
+    font-size: 3rem;
+}
