@@ -36,10 +36,10 @@ html, body{
     top:2.8rem;
     position: relative;
     overflow: hidden;
+    word-wrap: none;
     border-right: 0.1rem solid white;
     animation:
-        blink-border .75s step-end infinite,
-        typing 3.5s steps(40, end)
+        blink-border .75s step-end infinite
 }
 @keyframes typing {
     from { width: 0 }
