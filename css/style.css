@@ -18,18 +18,36 @@ html, body{
 /* SLIDER */
 #writer{
     position: absolute;
-    padding: 5%;
+    padding: 5% 3rem;
     height: 15rem;
-    width: 20%;
-    vertical-align: middle;
     color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
-.typewriter{
+#h1Writer{
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 700;
+    border-right: 0.1rem solid white;
+    border-bottom: 1rem solid white;
+    animation:
+        blink-border .75s step-end infinite
+}
+#caption{
+    top:2.8rem;
+    position: relative;
     overflow: hidden;
-    border-right: .3rem;
+    border-right: 0.1rem solid white;
+    animation:
+        blink-border .75s step-end infinite,
+        typing 3.5s steps(40, end)
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-border{
+    from, to {border-right-color: transparent }
+    50% { border-color: white;}
 }
 #slider{
     position: relative;
@@ -46,13 +64,13 @@ html, body{
     width: 80%;
     margin: -2rem auto 0;
 }
-#inkBar>#lstSlide{
+#inkBar>#ctrlSlide{
     margin: 0 auto;
     width: 20%;
     display: flex;
     justify-content: space-between;
 }
-#inkBar>#lstSlide>.ctrlSlide{
+#inkBar>#ctrlSlide>.ctrlSlide{
     width: 0.5rem;
     height: 1rem;
     border-radius: 5rem;
@@ -60,7 +78,7 @@ html, body{
     background-color: papayawhip;
     box-shadow: slategrey 0.0rem 0.1rem 0.3rem;
 }
-#inkBar>#lstSlide>.ctrlSlide:hover{
+#inkBar>#ctrlSlide>.ctrlSlide:hover{
     background-color: white;
     transform: scale(1.2);
 }

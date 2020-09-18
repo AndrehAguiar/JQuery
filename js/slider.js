@@ -1,7 +1,7 @@
 import { change, sldPosition } from "./scripts.js";
+import { lstSlide } from "./sldContent.js";
 
 let position;
-const lstSlide = ['#1', '#2', '#3', '#4', '#5'];
 const reset = true;
 
 let resetPosition = function () {
