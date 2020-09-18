@@ -16,6 +16,21 @@ html, body{
 }
 
 /* SLIDER */
+#writer{
+    position: absolute;
+    padding: 5%;
+    height: 15rem;
+    width: 20%;
+    vertical-align: middle;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+.typewriter{
+    overflow: hidden;
+    border-right: .3rem;
+}
 #slider{
     position: relative;
     height: 20rem;

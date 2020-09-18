@@ -1,63 +1,39 @@
-$(function () {
+import { getPosition, resetPosition, incrementPosition, lstSlide } from "./slider.js";
 
-    let position = 0;
-    const lstSlide = ['#1', '#2', '#3', '#4', '#5'];
+const h1Writer = ['Frontend development...', '#2', '#3', '#4', '#5'];
 
-    let change = function (arg) {
+const reset = false;
+let sldPosition = getPosition();
+let id = null;
+let timer = null;
 
-        for (id of lstSlide) {
-            id == arg ?
-                $(arg).fadeToggle("fast", "linear") : $(id).hide();
-        }
-    };
+let change = function (arg, newPosition, reset) {
 
-    let carroussel = function () {
-        if (position >= lstSlide.length) {
-            position = 0;
-        }
-        change(lstSlide[position]);
-        position++;
-    };
+    for (id of lstSlide) {
 
-    let auto = function () {
-        setInterval(carroussel, 5000);
-    };
+        id == arg ? $(arg).fadeToggle("fast", "linear") : $(id).hide();
+    }
+    $(writer).text(h1Writer[sldPosition]);
+    if (reset === true) {
+        clearInterval(timer);
+        auto();
+    }
+    sldPosition = newPosition;
+};
 
-    $('#l1').click(function () {
-        change(lstSlide[0]);
-        position = 0;
-    });
+let carroussel = function () {
 
-    $('#l2').click(function () {
-        change(lstSlide[1]);
-        position = 1;
-    });
+    sldPosition = sldPosition < lstSlide.length - 1
+        ? incrementPosition(sldPosition) : resetPosition();
 
-    $('#l3').click(function () {
-        change(lstSlide[2]);
-        position = 2;
-    });
+    change(lstSlide[sldPosition], sldPosition);
 
-    $('#l4').click(function () {
-        change(lstSlide[3]);
-        position = 3;
-    });
+};
 
-    $('#l5').click(function () {
-        change(lstSlide[4]);
-        position = 4;
-    });
+let auto = function () {
+    timer = setInterval(carroussel, 5000);
+};
 
-    $('#goRight').click(function () {
-        position++
-        if (position > 4) position = 0;
-        change(lstSlide[position]);
-    });
+window.onload = auto;
 
-    $('#goLeft').click(function () {
-        position--
-        if (position < 0) position = 4;
-        change(lstSlide[position]);
-    });
-    window.onload = auto;
-});
+export { change, sldPosition };
