@@ -6,7 +6,8 @@ $(function () {
     let change = function (arg) {
 
         for (id of lstSlide) {
-            id == arg ? $(arg).fadeIn("slow", "linear") : $(id).hide();
+            id == arg ?
+                $(arg).fadeToggle("fast", "linear") : $(id).hide();
         }
     };
 
