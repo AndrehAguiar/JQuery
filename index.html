@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template - JQuery</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -13,13 +15,16 @@
         <menu>
             <nav id="menu">MENU AQUI</nav>
         </menu>
-        <div id="slider">
-            <article id="writer">
-                <h1 id="h1Writer"></h1>
-            </article>
-            <article id="writer">
-                <h4 id='caption'></h4>
-            </article>
+        <section id="slider">
+            <span id="about">
+                <article id="writer">
+                    <h1 id="h1Writer"></h1>
+                </article>
+                <article id="writer">
+                    <h4 id='caption'></h4>
+                </article>
+                <button id="btnContact">Contact me</button>
+            </span>
             <img src="img/1.jpg" alt="" class="slide" id="1">
             <img src="img/2.jpg" alt="" class="slide hidden" id="2">
             <img src="img/3.jpg" alt="" class="slide hidden" id="3">
@@ -38,8 +43,19 @@
                 <div id="goLeft" class="arrow left"></div>
                 <div id="goRight" class="arrow right"></div>
             </div>
-        </div>
+        </section>
     </header>
+    <section id="container">
+        <div id="content">
+
+        </div>
+    </section>
+    <footer id="footer">
+        Template - JQuery<br>
+        <h4>André Aguiar | TOP Artes - Impressões, Vídeos e WEB</h4>
+        <a href="http://www.topartes.com" target="_blank">www.topartes.com</a>
+
+    </footer>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="module" src="js/scripts.js"></script>
 </body>

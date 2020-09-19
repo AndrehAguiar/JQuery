@@ -1,7 +1,7 @@
 import { carroussel, resetPosition } from "./slider.js";
 import { getH1, typeWriter } from "./sldContent.js";
 
-const speed = 50;
+const speed = 60;
 
 let timer = null;
 

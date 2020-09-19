@@ -44,6 +44,7 @@ let formatBorder = function (state) {
         $('#h1Writer').css({ 'with': '0', 'border-right': 'none' });
     } else {
         $('#h1Writer').css({ 'with': '0', 'border-right': 'solid 0.1rem white' });
+        $('#caption').css({ 'with': '0', 'border-right': 'none' });
     }
 }
 
