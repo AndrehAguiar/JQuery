@@ -1,5 +1,6 @@
 import { carroussel, resetPosition } from "./slider.js";
 import { getH1, typeWriter } from "./sldContent.js";
+import { getArticle } from "./content.js";
 
 const speed = 60;
 
@@ -13,6 +14,8 @@ let auto = function () {
 
     // INITIAL TIMER ROTATE
     timer = setInterval(carroussel, 5000);
+
+    getArticle();
 
 };
 
