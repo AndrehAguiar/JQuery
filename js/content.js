@@ -1,6 +1,8 @@
 import { contentArticle } from "./artContent.js";
+
 let i;
 let announcement;
+
 const formatAnnoun = function (text, i) {
 
     if (i <= 300) {
@@ -22,10 +24,12 @@ const setArticle = function (article) {
     let name = article.name;
     let title = article.title;
     let image = article.image;
-    let text = formatAnnoun(article.text, 250);
+    let text = article.text;
     let link = article.citeLink;
     let cite = article.citation;
     let date = article.citeDate;
+
+    formatAnnoun(article.text, 250);
 
     const objArticle = `
     <article>
@@ -38,6 +42,7 @@ const setArticle = function (article) {
     </article>`;
     document.getElementById('content').innerHTML += objArticle;
 }
+
 const getArticle = function () {
     for (let obj of contentArticle) {
         setArticle(obj);
